@@ -14,7 +14,7 @@ function Form() {
       <div className="centralUser">CENTRAL DE COMUNICAÇÃO DE MANUTENÇÃO</div>
 
       <form
-        action="https://getform.io/f/02d1c6e4-aec1-4972-b0c5-cb5ce0471c73"
+        action="https://getform.io/f/4b37901a-90c4-4235-a491-070e12a16afa"
         method="POST"
         encType="multipart/form-data"
         className="forms"
@@ -83,7 +83,8 @@ function Form() {
           >
             Registro Fotográfico
             <Box sx={{ width: "25%" }} />
-            <input hidden accept="image/*" multiple type="file" />
+            <input hidden accept="image/*" multiple name="foto-do-serviço" type="file"/>
+            
           </Button>
         </div>
         <div className="lineForm">
@@ -109,8 +110,8 @@ function Form() {
               <input
                 type="radio"
                 name="tipo-de-investimento"
-                value="frontend"
-                checked
+                value="manutenção"
+                
                 hidden
               />
             </Button>
@@ -132,7 +133,7 @@ function Form() {
               <input
                 type="radio"
                 name="tipo-de-investimento"
-                value="backend"
+                value="melhoria"
                 hidden
               />
             </Button>
@@ -154,7 +155,7 @@ function Form() {
               <input
                 type="radio"
                 name="tipo-de-investimento"
-                value="fullstack"
+                value="Investimento"
                 hidden
               />
             </Button>
@@ -186,7 +187,6 @@ function Form() {
                 type="radio"
                 name="status"
                 value="ÁREA ATIVA"
-                checked
                 hidden
                 className="inputs"
               />
@@ -235,9 +235,10 @@ function Form() {
           >
             ENVIAR
             <Box sx={{ width: "25%" }} />
-          
+          <button type="submit">send</button>
           </Button>
         </div>
+        
       </form>
     </div>
   );
