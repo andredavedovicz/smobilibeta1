@@ -16,7 +16,7 @@
 .forms {
   width: 100%;
   height: 88%;
-  background-color: #4c4d54;
+  background-color: #a1a2a6;
 }
 
 .centralUser {
@@ -34,6 +34,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+button, .lineForm {
+  font-size: 17px;
 }
 .description {
   width: 100%;
@@ -58,8 +61,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4c4d54;
-  color: #a1a2a6;
 }
 .categories {
   width: 75%;
@@ -67,7 +68,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #4c4d54;
+  
 }
 .whatis{
     width: 33.33%;
@@ -75,6 +76,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
   .whatis2{
     width: 50%;
@@ -87,3 +89,26 @@
     width: 0px;
     height: 0px;
   }
+  .categories-status {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .status{
+  width: 50%;
+  height: 100%;
+  color: #252526;
+ }
+ .Radio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+ }
+ .type{
+  width: 33.33%;
+  height: 100%;
+  color: #252526;
+ }
