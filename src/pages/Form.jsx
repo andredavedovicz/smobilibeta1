@@ -32,7 +32,7 @@ function Form() {
       <div className="centralUser">CENTRAL DE COMUNICAÇÃO DE MANUTENÇÃO</div>
 
       <form
-        action="https://getform.io/f/4b37901a-90c4-4235-a491-070e12a16afa"
+        action="https://getform.io/f/02d1c6e4-aec1-4972-b0c5-cb5ce0471c73"
         method="POST"
         encType="multipart/form-data"
         className="forms"
@@ -44,12 +44,14 @@ function Form() {
           <div className="category">
             <TextField
               id="outlined-basic"
-              label="User"
+              label="Usuário"
               variant="outlined"
               type="text"
-              name="user"
+              name="usuario"
               multiline
               sx={{ width: "100%", m: 0, backgroundColor: "#a1a2a6" }}
+              inputProps={{ style: { fontSize: "18px" } }}
+              InputLabelProps={{ style: { fontSize: "18px" } }}
             />
           </div>
         </div>
@@ -66,6 +68,8 @@ function Form() {
               name="Local"
               multiline
               sx={{ width: "100%", m: 0, backgroundColor: "#a1a2a6" }}
+              inputProps={{ style: { fontSize: "18px" } }}
+              InputLabelProps={{ style: { fontSize: "18px" } }}
             />
           </div>
         </div>
@@ -80,7 +84,9 @@ function Form() {
               variant="outlined"
               type="text"
               name="descrição do serviço"
-              sx={{ width: "100%", height: "100%", backgroundColor: "#a1a2a6" }}
+              sx={{ width: "100%", height: "100%", backgroundColor: "#a1a2a6", }}
+              inputProps={{ style: { fontSize: "18px" } }}
+              InputLabelProps={{ style: { fontSize: "17px" } }}
               multiline
               rows={3}
             />
@@ -96,11 +102,11 @@ function Form() {
             className="category"
             sx={{
               textTransform: "none",
-              background: "#4C4D54",
+              background: "#585859",
               justifyContent: "flex-start",
-              border: "none",
+              border: "2px solid #252526",
               boxShadow: "none",
-              fontSize: "15px",
+              fontSize: "18px",
             }}
           >
             Registro Fotográfico
@@ -120,18 +126,39 @@ function Form() {
           </div>
           <Box className="category">
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">TIPO</InputLabel>
+              <InputLabel
+                id="demo-simple-select-label"
+                sx={{ textTransform: "none", fontSize: "18px" }}
+              >
+                TIPO DE MANUTENÇÃO
+              </InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={tipo}
-                label="TIPO"
+                label="TIPO DE MANUTENÇÃO"
                 onChange={handleChangeTipo}
-                name="tipo"                
+                name="tipo"
+                sx={{ textTransform: "none", fontSize: "20px" }}
               >
-                <MenuItem  value={"Manutenção"}>Manutenção</MenuItem>
-                <MenuItem  value={"Melhoria"}>Melhoria</MenuItem>
-                <MenuItem  value={"Investimento"}>Investimento</MenuItem>
+                <MenuItem
+                  value={"Manutenção"}
+                  sx={{ textTransform: "none", fontSize: "20px" }}
+                >
+                  Manutenção
+                </MenuItem>
+                <MenuItem
+                  value={"Melhoria"}
+                  sx={{ textTransform: "none", fontSize: "20px" }}
+                >
+                  Melhoria
+                </MenuItem>
+                <MenuItem
+                  value={"Investimento"}
+                  sx={{ textTransform: "none", fontSize: "20px" }}
+                >
+                  Investimento
+                </MenuItem>
               </Select>
             </FormControl>
           </Box>
@@ -142,17 +169,33 @@ function Form() {
           </div>
           <Box className="category">
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">AREA ATIVA?</InputLabel>
+              <InputLabel
+                id="demo-simple-select-label"
+                sx={{ textTransform: "none", fontSize: "20px" }}
+              >
+                AREA ATIVA?
+              </InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={status}
                 label="AREA ATIVA?"
                 onChange={handleChangeStatus}
-                name="STATUS"                
+                name="STATUS"
+                sx={{ textTransform: "none", fontSize: "20px" }}
               >
-                <MenuItem  value={"AREA ATIVA"}>AREA ATIVA</MenuItem>
-                <MenuItem  value={"AREA PARALISADA"}>AREA PARALISADA</MenuItem>
+                <MenuItem
+                  value={"AREA ATIVA"}
+                  sx={{ textTransform: "none", fontSize: "20px" }}
+                >
+                  AREA ATIVA
+                </MenuItem>
+                <MenuItem
+                  value={"AREA PARALISADA"}
+                  sx={{ textTransform: "none", fontSize: "20px" }}
+                >
+                  AREA PARALISADA
+                </MenuItem>
               </Select>
             </FormControl>
           </Box>
@@ -161,24 +204,9 @@ function Form() {
           <div className="icons">
             <BsFillSendCheckFill size="3.5rem" />
           </div>
-          <Button
-            variant="contained"
-            component="label"
-            className="category"
-            sx={{
-              textTransform: "none",
-              background: "#4C4D54",
-              justifyContent: "flex-start",
-              border: "none",
-              boxShadow: "none",
-              fontSize: "15px",
-            }}
-            type="submit"
-          >
+          <button type="submit" className="category enviar">
             ENVIAR
-            <Box sx={{ width: "25%" }} />
-            <button type="submit">send</button>
-          </Button>
+          </button>
         </div>
       </form>
     </div>

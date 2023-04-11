@@ -26,6 +26,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
+  border-bottom: 3px solid #252526;
 }
 .lineForm {
   width: 100%;
@@ -112,3 +114,15 @@ button, .lineForm {
   height: 100%;
   color: #252526;
  }
+ .enviar{
+  background-color: #585859;
+  border: 2px solid #252526;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  color:#efefef;
+  font-size: 25px;
+ }
+ .enviar:hover{
+  background-color: #1976d2;
+  border: 2px solid #252526;
+ }
+ 
